@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './NavbarStyles.module.css';
 import { Menu, X } from 'lucide-react'; // icon library (install with: npm install lucide-react)
+import Hero from './../Hero/Hero.jsx'
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ function Navbar() {
 
       {/* Menu */}
       <ul className={`${styles.menu} ${open ? styles.showMenu : ''}`}>
-        <li><a href="#hero">Home</a></li>
+        <li><a href={Hero}>Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
